@@ -5,6 +5,7 @@ import Account from './components/Account';
 import { Route, Routes } from 'react-router-dom';
 import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import Members from './components/Database';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             element={
               <ProtectedRoute>
                 <Account />
+                <Members/>
               </ProtectedRoute>
             }
           />
