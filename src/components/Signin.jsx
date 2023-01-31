@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
-import { GoogleButton } from 'react-google-button';
+// import { GoogleButton } from 'react-google-button';
 
 const Signin = () => {
   const [email, setEmail] = useState('');
@@ -22,22 +22,22 @@ const Signin = () => {
     }
   };
 
-  const handleGoogleSignIn = async (e) => {
-    e.preventDefault();
-    setError('')
-    try {
-      await googleSignIn();
-    } catch (e) {
-      setError(e.message)
-      console.log(e.message);
-    }
-  };
+  // const handleGoogleSignIn = async (e) => {
+  //   e.preventDefault();
+  //   setError('')
+  //   try {
+  //     await googleSignIn();
+  //   } catch (e) {
+  //     setError(e.message)
+  //     console.log(e.message);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (user != null) {
-      navigate('/account');
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user != null) {
+  //     navigate('/account');
+  //   }
+  // }, [user]);
 
   return (
     <div className='max-w-[700px] mx-auto my-16 p-4'>
@@ -57,9 +57,9 @@ const Signin = () => {
         로그인
         </button>
       </form>
-      <div className='max-w-[240px] m-auto py-4'>
+      {/* <div className='max-w-[240px] m-auto py-4'>
         <GoogleButton onClick={handleGoogleSignIn} />
-      </div>
+      </div> */}
     </div>
   );
 };
